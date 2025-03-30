@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Downloader</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h2>Beranda</h2>
+  </header>
+  <main>
+    <section class="spotify-section">
+      <div class="spotify-header">
+        <i class="fab fa-spotify"></i>
+        <h2>Spotify Downloader</h2>
+      </div>
+      <div class="spotify-container">
+        <p class="description">Spotify Downloader berfungsi untuk mendownload/mendapatkan audio didalam track spotify</p>
+        
+        <div class="input-group">
+          <div class="input-with-actions">
+            <input type="text" placeholder="Masukkan url spotify!" id="spotifyDownloader">
+            <div class="input-buttons">
+              <button class="clear-btn" title="Hapus">
+                <i class="fas fa-times"></i>
+              </button>
+              <button class="paste-btn" title="Tempel dari clipboard">
+                <i class="fas fa-paste"></i>
+              </button>
+            </div>
+          </div>
+          <button class="spotbtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+        
+        <div id="result" class="result-box">
+          <i class="fas fa-music"></i>
+          <span>Hasil akan muncul disini!</span>
+        </div>
+
+        <div id="track-info" class="track-info" style="display: none;">
+          <div class="track-cover">
+            <img id="track-cover" src="" alt="Album Cover">
+          </div>
+          <div class="track-details">
+            <h3 id="track-title"></h3>
+            <p id="track-artist"></p>
+            <p id="track-album"></p>
+            <a id="download-link" href="#" class="download-btn">
+              <i class="fas fa-download"></i> Download MP3
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
