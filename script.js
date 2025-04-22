@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showResult('Sedang memproses...', 'loading');
             trackInfo.style.display = 'none';
             
-            const response = await fetch(`http://spotify-dl.xbotzlauncher.biz.id/api/spotify/download?url=${encodeURIComponent(url)}`);
+            const response = await fetch(`/api/spotify/download?url=${encodeURIComponent(url)}`);
             const data = await response.json();
 
             if (data.status && data.code === 200) {
@@ -100,3 +100,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+const toggleTheme = document.getElementById('toggleTheme')
+const savedTheme = localStorage.getItem('theme')
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark')
+  toggleTheme.checked = true
+}
+toggleTheme.addEventListener('change', () => {
+  if (toggleTheme.checked) {
+    document.body.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    document.body.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }
+})
