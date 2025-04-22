@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Downloader</title>
+  <title>Spotify Downloader MP3 - Cepat & Gratis</title>
+  <meta name="description" content="Download lagu Spotify ke MP3 tanpa iklan dan tanpa ribet.">
+  <meta name="keywords" content="spotify, spotdl, downloader, spotdlx, dlx">
+  <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
     <h2>Beranda</h2>
+    <div class="theme-toggle">
+      <input type="checkbox" id="toggleTheme">
+      <label for="toggleTheme" class="slider"></label>
+    </div>
   </header>
   <main>
     <section class="spotify-section">
@@ -44,10 +51,10 @@
 
         <div id="track-info" class="track-info" style="display: none;">
           <div class="track-cover">
-            <img id="track-cover" src="" alt="Album Cover">
+            <img id="track-cover" src="placeholder.jpg" alt="Album Cover" style="display: none;">
           </div>
           <div class="track-details">
-            <h3 id="track-title"></h3>
+            <h3 id="track-title" style="display: none;">Loading...</h3>
             <p id="track-artist"></p>
             <p id="track-album"></p>
             <a id="download-link" href="#" class="download-btn">
