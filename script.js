@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showResult('Sedang memproses...', 'loading');
             trackInfo.style.display = 'none';
             
-            const response = await fetch(`/api/spotify/download?url=${encodeURIComponent(url)}`);
+            const response = await fetch(`https://spotify.xbotzlauncher.biz.id/api/spotify/download?url=${encodeURIComponent(url)}`);
             const data = await response.json();
 
             if (data.status && data.code === 200) {
