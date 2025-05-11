@@ -81,7 +81,7 @@ Setelah sukses, domain dapat diakses melalui:
 
 ## ✅ 4. Verifikasi Aplikasi
 
-Pastikan aplikasi Node.js Anda berjalan di port `3001`. Gunakan perintah berikut untuk memastikan:
+Pastikan aplikasi Node.js Anda berjalan di port `3000`. Gunakan perintah berikut untuk memastikan:
 
 ```bash
 curl http://localhost:3000
